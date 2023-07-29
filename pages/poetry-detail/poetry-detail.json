@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "诗词详情",
+  "usingComponents": {
+    "l-tabs": "/dist/tabs/index",
+    "l-tabpanel":"/dist/tabpanel/index",
+    "l-segment": "/dist/segment/index",
+    "l-segment-item": "/dist/segment-item/index",
+    "l-icon": "/dist/icon/index",
+    "l-action-sheet": "/dist/action-sheet/index",
+    "l-tag": "/dist/tag/index",
+    "l-capsule-bar":"/dist/capsule-bar/index",
+    "l-button": "/dist/button/index",
+    "l-message": "/dist/message/index"
+  }
+}

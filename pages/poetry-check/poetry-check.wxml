@@ -1,0 +1,44 @@
+
+<view style="margin-top: 10rpx;text-align: center;" >
+<view style="font-size: 40rpx; padding: 10rpx;" >
+{{formsName}}
+</view>
+<view style="font-size: 36rpx;" >
+    <rich-text nodes="{{formHtml}}"></rich-text>
+</view>
+</view>
+   
+<view style="margin-top: 20rpx;">
+    <view style="margin: 15rpx;">
+    <textarea 	bindinput="listenValue" class="content"  placeholder='诗的正文' minlength="4" maxlength="500" style="min-height:180rpx" auto-height/> 
+</view>
+<view style="margin-left: 50rpx;margin-right: 50rpx;">
+    <picker bindchange="bindTypeChange" range-key="name" value="{{typeIndex}}" range="{{typeList}}">
+        <l-list title="类型"  tag-content="{{typeList[typeIndex].name}}" tagShape="circle" tag-position="right"/>
+    </picker>
+    <picker bindchange="bindFirstChange" range-key="name" value="{{firstIndex}}" range="{{firstList}}">
+        <l-list title="首句"  tag-content="{{firstList[firstIndex].name}}" tagShape="circle" tag-position="right"/>
+    </picker>
+    <picker bindchange="bindBookChange" range-key="name" value="{{bookIndex}}" range="{{bookList}}">
+        <l-list title="韵书"  tag-content="{{bookList[bookIndex].name}}" tagShape="circle" tag-position="right"/>
+    </picker>
+</view>
+
+<view style="text-align: center;">
+    <l-button bind:lintap="doCheck" size="large" style="margin: 10rpx;" icon="success" icon-size="30" icon-color="white">
+      开始检测
+    </l-button>
+</view>
+</view>
+<view wx:if="{{checked}}" style=" background-color: rgba(255, 255, 255, 0.6);margin: 20rpx; padding: 20rpx;">
+    <view style="margin-top: 20rpx;font-size: 33rpx;" >
+        <rich-text style="word-spacing:20rpx;" nodes="{{pingze}}"></rich-text>
+    </view>
+    <view style="font-size: 31rpx;" >
+        <text style="color: rgb(58, 58, 58);font-size: 36rpx;">
+    -----检测报告（{{bookName}}）-----
+    </text>
+    <rich-text nodes="{{suggest}}"></rich-text>
+    </view>
+   
+</view>

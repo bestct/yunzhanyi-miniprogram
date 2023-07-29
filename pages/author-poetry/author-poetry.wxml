@@ -1,0 +1,21 @@
+<view style="padding: 15rpx;margin-top: 30rpx; background-color: white;">
+    <l-search-bar placeholder="{{'搜索'+name+'的作品'}}" show-cancel="{{false}}" bind:linconfirm="onConfirm" bind:linchange="onChange" bind:linclear="onClear"/>
+</view>
+<l-loadmore show="{{show}}" type="{{type}}"  line="{{true}}" size="36" l-class="loading">
+  <view slot="content" class="container">
+    <view class="content" wx:for="{{poetryList}}" wx:for-item="poetry" wx:key="poetry">
+    <view bindtap="toPoetry"
+    data-id="{{poetry.poetryId}}">
+      <view class="title-author">
+      <text class='title'>{{poetry.poetryTitle}}</text>
+      <view class="author">
+        [<text>{{poetry.poetryDynasty}}</text>]
+          <text>{{poetry.poetryAuthor}}</text>        
+      </view>
+    </view>
+        <text class='poetry-content'>{{poetry.poetryContent}}</text>
+    </view>
+  </view>
+</view>
+</l-loadmore>
+<image src='../../static/icon/up.png' class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"></image>

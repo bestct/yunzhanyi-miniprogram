@@ -1,0 +1,39 @@
+    <view style="padding: 15rpx;margin-top: 30rpx; background-color: white;">
+        <l-search-bar placeholder="搜索诗文/作者" 
+        value="{{initValue}}"
+        show-cancel="{{false}}" bind:linconfirm="onConfirm" bind:linchange="onChange" bind:linclear="onClear"/>
+    </view>
+    <view style="background-color: white; margin: 10rpx;">
+        <l-segment l-active-class="segment-active" l-inactive-class="segment-inactive" has-line="{{false}}" bind:linchange="changeCurrent">
+            <l-segment-item wx:for="{{typeList}}" wx:for-item='type' tab="{{type.typeName}}" key="{{type.typeId}}" wx:key="key">
+            </l-segment-item>
+        </l-segment>
+    </view>
+    <l-loadmore show="{{show}}" type="{{type}}" line="{{true}}" size="36" l-class="loading">
+        <view slot="content" class="container">
+            <view wx:if="{{searchType==='poetry'}}" class="content" wx:for="{{poetryList}}" wx:for-item="poetry" wx:key="poetry">
+                <view bindtap="toPoetry" data-id="{{poetry.poetryId}}">
+                    <view class="title-author">
+                        <text class='title'>{{poetry.poetryTitle}}</text>
+                        <view class="author">
+                            [<text>{{poetry.poetryDynasty}}</text>]
+                            <text>{{poetry.poetryAuthor}}</text>
+                        </view>
+                    </view>
+                    <text class='poetry-content'>{{poetry.poetryContent}}</text>
+                </view>
+            </view>
+            <view wx:if="{{searchType==='author'}}" class="content" wx:for="{{authorList}}" wx:for-item="author" wx:key="author">
+                <view catchtap="toAuthor" data-id="{{author.id}}">
+                    <view style="font-size: 36rpx;font-weight: 900 !important;">
+                        {{author.authorName}}
+                    </view>
+                    <view class="info">
+                        <text class="info-content">{{author.info}}</text>
+                        <text>共收录{{author.recordCount}}首作品</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </l-loadmore>
+<image src='../../static/icon/up.png' class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"></image>

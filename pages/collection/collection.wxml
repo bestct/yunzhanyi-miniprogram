@@ -1,0 +1,42 @@
+<view style="    background-color: rgba(255, 255, 255, 0.6); margin: 10rpx;">
+<l-segment l-active-class="segment-active"
+  l-inactive-class="segment-inactive"
+  has-line="{{false}}"
+  bind:linchange="changeCurrent"
+  >
+    <l-segment-item
+        wx:for="{{typeList}}"
+        wx:for-item='type' tab="{{type.typeName}}" key="{{type.typeId}}" wx:key="key" >
+        </l-segment-item>
+      </l-segment>
+</view>
+<l-loadmore show="{{show}}" type="{{type}}"  line="{{true}}" size="36" l-class="loading">
+<view slot="content" class="container">
+<view wx:for="{{collectionList}}" wx:for-item="collection" wx:key="collection" >
+<view class="content">
+    <l-slide-view data-id='{{index}}' auto-close="true" close="{{index!==activeId}}" height="140" width="750" slide-width="140"  threshold="50" bind:slideopen="slideopen">
+          <view bindtap="toCollection" data-id='{{index}}' slot="left" class="left">
+            <view class='left-con'>
+              <text class='left-title'>{{collection.resName}}</text>
+              <text class='left-time'>{{collection.collectionTime}}</text>
+            </view>
+            <view class='left-price'><text style="color:rgb(12, 3, 136); font-size: 38rpx;">{{collection.collectionType===1?'诗文':'作者'}}</text> </view>
+          </view>
+          <view bindtap="deleteCollection" data-id='{{index}}' slot="right" class="right">
+            <text style="font-size: 35rpx;">删除</text>
+          </view>
+        </l-slide-view>
+</view>
+</view>
+<view hidden="{{hasData}}">
+<text>
+对不起,没有收藏
+</text>
+</view>
+</view>
+</l-loadmore>
+
+<l-message content="{{content}}"
+             type="{{type}}"
+             duration="{{ duration}}"
+             show="{{show}}"/>

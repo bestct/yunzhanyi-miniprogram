@@ -1,0 +1,23 @@
+/* pages/rhyme/rhyme.wxss */
+.book{
+  width: 32%;
+  justify-content: center;
+  display: flex;
+  margin-top: 20rpx;
+}
+
+.poetry-list{
+	column-gap: 5rpx;
+  column-count: 2;
+  padding: 10rpx 10rpx 10rpx 15rpx;
+}
+.title{
+	font-size: 35rpx;
+	 	width: 99%;  /*占每列的宽的900%*/
+		break-inside: avoid;
+		padding: 5rpx;
+		color: rgb(71, 16, 16);
+		overflow:hidden; 
+		text-overflow:ellipsis; 
+		white-space:nowrap;
+}

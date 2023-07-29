@@ -1,0 +1,26 @@
+<view class="VerticalBox">
+  <scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}" style="height:calc(100vh - {{capsuleBarHeight}}rpx)">
+    <view class="cu-item {{index==TabCur?' cur':''}}" wx:for="{{list}}" wx:key="index" bindtap='tabSelect' data-id="{{index}}">
+      {{item.name}}
+    </view>
+  </scroll-view>
+  <scroll-view class="VerticalMain" scroll-y scroll-with-animation style="height:calc(100vh - {{capsuleBarHeight}}rpx) " scroll-into-view="main-{{MainCur}}" bindscroll="VerticalMain">
+    <view class="padding-top padding-lr" wx:for="{{list}}" wx:key="index"  id="main-{{index}}">
+      <view class='cu-bar solid-bottom bg-white'>
+        <view class='action' style="font-weight: 900; color: #b40000;">
+          <text class='cuIcon-title'></text>{{item.name}} </view>
+          </view>
+          <view class="cu-list">
+          <view class="cu-item"
+          wx:for="{{item.poetryList}}" wx:key="index"  wx:for-item="poetry">
+          <navigator url="/pages/poetry-detail/poetry-detail?id={{poetry.poetryId}}">
+            <view class="poetry-title">
+            {{poetry.poetryTitle}}
+          </view>
+          </navigator>
+           </view>
+          </view>
+
+    </view>
+  </scroll-view>
+</view>

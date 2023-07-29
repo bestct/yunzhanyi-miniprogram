@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "我的收藏",
+  "usingComponents": {
+    "l-segment": "/dist/segment/index",
+    "l-segment-item": "/dist/segment-item/index",
+    "l-icon": "/dist/icon/index",
+    "l-capsule-bar":"/dist/capsule-bar/index",
+    "l-loadmore": "/dist/loadmore/index",
+    "l-slide-view": "/dist/slide-view/index",
+    "l-message": "/dist/message/index"
+    }
+}

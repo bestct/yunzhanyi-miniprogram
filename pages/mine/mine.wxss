@@ -1,0 +1,131 @@
+.user-box{
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+}
+.userinfo {
+  height: 200rpx;
+  margin: auto;  
+  margin-top: 190rpx;
+  text-align: center;
+}
+.userinfo .userinfo-avatar {
+  width: 130rpx;
+  height: 130rpx;
+  margin: auto;
+  border-radius: 50%;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.userinfo .userinfo-name {
+  font-size: 38rpx;
+  font-weight: bold;
+}
+
+
+.list-wrapper {
+  margin-top: 80rpx;
+  width: 100%;
+  border: azure;
+}
+ 
+/* 横着的分割View样式 */
+/*分割线样式*/
+.div-line{
+  background: #b6b9b0;
+  width: 100%;
+  height: 1rpx;
+}
+ 
+.list-item {
+  background-color: white;
+  padding: 0rpx;
+  margin-top: 0rpx;
+  
+  width: 100%;
+  height: 100rpx;
+}
+ 
+.list-item_active {
+  background-color: #f8fdff;
+}
+ 
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100rpx;
+  margin-top: 6rpx;
+  font-size: medium;
+}
+.item-text {
+  position: fixed;
+  left: 100rpx;
+  font-size: 35rpx;
+  font-style:normal;
+  font-weight: normal;
+}
+.item-array {
+  position: fixed;
+  right: 50rpx;
+  width: 40rpx;
+  height: 40rpx;
+} 
+.item-image {
+  position: fixed;
+  left: 30rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.official{
+  width: 92%;
+  position: fixed;
+  bottom: 100rpx;
+  font-size: small;
+  text-align: center;
+  margin: 30rpx;
+}
+
+.my{
+  margin: 50rpx 0 0 0;
+  border-top: solid 1px #ebebeb;
+  border-bottom: solid 1px #ebebeb;
+}
+.my .my-item{
+  width: 750rpx;
+  background: #ffffff;
+  padding: 0;
+  height: 100rpx;
+}
+.my .my-item .myitem-icon{
+  flex: 1;
+}
+.my .my-item .myitem-icon image{
+  width: 45rpx;
+  height: 45rpx;
+  padding: 27.5rpx 0;
+}
+.my .my-item .myitem-name{
+  flex: 5;
+  text-align: left;
+  font-size: 34rpx;
+  color: #6d6d6d;
+  line-height: 60rpx;
+  font-weight: normal;
+  padding: 20rpx 0;
+  border-bottom: solid 1px #ebebeb;
+}
+.my .my-item:last-child .myitem-name{
+  border-bottom: none;
+}
+.my .my-item-active{
+  opacity: 0.9;
+  background: #f7f7f7;
+}
+.official{
+  width: 92%;
+  position: fixed;
+  bottom: 100rpx;
+  font-size: small;
+  text-align: center;
+  margin: 30rpx;
+}

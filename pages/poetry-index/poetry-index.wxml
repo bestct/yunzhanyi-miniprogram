@@ -1,0 +1,69 @@
+<view class="tag-bar">
+<view class="head">
+  朝代
+</view>
+<scroll-view style="width: 88%;">
+  <l-segment l-active-class="segment-active"
+  l-inactive-class="segment-inactive"
+  even="{{false}}"
+  has-line="{{false}}"
+  active-key="{{activeDynastyKey}}"
+  scrollable 
+  bind:linchange="changeDynastyCurrent"
+  >
+    <l-segment-item
+        wx:for="{{dynastyList}}"
+        wx:for-item='item' tab="{{item.dynastyName}}" key="{{item.dynastyId}}" wx:key="key" slot="{{item.dynastyId}}"
+        >
+        </l-segment-item>
+      </l-segment>
+
+</scroll-view>
+</view>
+<view class="tag-bar">
+<view class="head">
+  分类
+</view>
+<scroll-view style="width: 88%;">
+<l-segment l-active-class="segment-active"
+  l-inactive-class="segment-inactive"
+  even="{{false}}"
+  has-line="{{false}}"
+  active-key="{{activeTagKey}}"
+  scrollable 
+  bind:linchange="changeTagCurrent"
+  >
+    <l-segment-item
+        wx:for="{{tagList}}"
+        wx:for-item='item' tab="{{item.tagName}}" key="{{item.tagId}}" wx:key="key" slot="{{item.tagId}}"
+        >
+        </l-segment-item>
+      </l-segment>
+</scroll-view>
+
+</view>
+
+<l-loadmore show="{{show}}" type="{{type}}"  line="{{true}}" size="36" l-class="loading">
+  <view slot="content" class="container">
+    <view  class="content" wx:for="{{poetryList}}" wx:for-item="poetry" wx:key="poetry">
+    <view bindtap="toPoetry"
+    data-id="{{poetry.poetryId}}">
+      <view class="title-author">
+      <text class='title'>{{poetry.poetryTitle}}</text>
+      <view class="author">
+        [<text>{{poetry.poetryDynasty}}</text>]
+          <text>{{poetry.poetryAuthor}}</text>        
+      </view>
+    </view>
+        <text class='poetry-content'>{{poetry.poetryContent}}</text>
+    </view>
+  </view>
+  <view hidden="{{hasData}}">
+
+  <text style="font-size: 35rpx;">
+  对不起,没有您想要的诗词
+  </text>
+  </view>
+</view>
+</l-loadmore>
+<image src='../../static/icon/up.png' class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"></image>

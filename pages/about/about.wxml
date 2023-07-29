@@ -1,0 +1,31 @@
+<view style="padding: 20rpx;"> 
+<content-card name="介绍">
+<view style="width: 97%;">
+<view style="text-align: center; ">
+<image style="width: 360rpx;height: 135rpx;" src="https://www.yunzhanyi.net/img/main_logo_black.png">
+</image>
+</view>
+    <text style="font-size: 34rpx;">
+        云沾衣 出自唐代的书法家、诗人张旭《山中留客》一诗中的“纵使晴明无雨色，入云深处亦沾衣。”\n 我们致力于弘扬中国优秀传统文化，分享和传播诗词古文之美。 
+          </text>
+          <view bindtap="copySite" style="font-size: 34rpx;">
+            官网地址:<text style="width: 98%; color: #b40000;">www.yunzhanyi.net</text> 
+          </view>
+</view>
+
+</content-card>
+<content-card name="发展历程">
+    <l-steps direction="column" active-index="1">
+      <l-step title="2022-10-07">
+        <view class="describe-container" slot="describe">
+          云沾衣诗词网站上线
+        </view>
+      </l-step>
+      <l-step title="2022-10-18">
+        <view class="describe-container" slot="describe">
+          云沾衣诗词网小程序上线
+        </view>
+      </l-step>
+    </l-steps>
+</content-card>
+</view>

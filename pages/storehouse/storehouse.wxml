@@ -1,0 +1,46 @@
+
+  <view style="padding: 15rpx;margin-top: 30rpx; background-color: white;">
+    <l-search-bar placeholder="搜索诗人/作者" value="{{initValue}}" show-cancel="{{false}}" bind:linconfirm="search" />
+  </view>
+  <view style="margin: 30rpx;">
+    <content-card name="全部">
+      <view style="margin: 11rpx; display: flex;">
+        <view bindtap="toAllPoetry" style="width: 50%;justify-content: center;display: flex;">
+          <view>
+            <view class="up-bar"></view>
+            <view class="mod-text">
+              <text style="font-size: 25rpx;">收录四十余万首</text>
+              <text class="tag-name">全部诗词</text>
+            </view>
+          </view>
+        </view>
+        <view bindtap="toAllAuthor" style="width: 50%;justify-content: center;display: flex;">
+          <view>
+            <view class="up-bar"></view>
+            <view class="mod-text">
+              <text style="font-size: 25rpx;">收录两万余位</text>
+              <text class="tag-name">全部作者</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </content-card>
+    <view wx:for="{{cardList}}" wx:for-item="card" wx:key="card">
+      <content-card name="{{card.cardName}}">
+        <view style="margin: 20rpx; display: flex;flex-wrap: wrap;">
+          <view wx:for="{{card.tagList}}" wx:for-item="tag" wx:key="tag" class="tag" data-tag="{{tag}}"
+          bindtap="toTag"
+          >
+            <view style="margin: 10rpx; ">
+              <view class="up-bar"></view>
+              <view class="mod-text">
+                <text style="font-size: 25rpx;">{{tag.subName}}</text>
+                <text class="tag-name">{{tag.tagName}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </content-card>
+    </view>
+  </view>
+  <!-- 发布悬浮按钮 -->

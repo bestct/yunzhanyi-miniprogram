@@ -1,0 +1,10 @@
+{
+
+  "usingComponents": {
+    "l-search-bar": "/dist/search-bar/index",
+    "content-card": "/components/content-card/content-card",
+    "l-notice-bar": "/dist/notice-bar/index",
+    "l-button": "/dist/button/index",
+    "l-icon": "/dist/icon/index"
+  }
+}

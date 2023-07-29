@@ -1,0 +1,66 @@
+@import "../../main.wxss";
+@import "../../icon.wxss";
+.poetry-title{
+  border-radius: 5rpx;
+  font-size: 38rpx; 
+  margin: 4rpx;
+  padding: 20rpx;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.VerticalNav.nav {
+    width: 300rpx;
+    padding-top: 30rpx;
+    white-space: initial;
+  }
+
+::-webkit-scrollbar {
+	display: none;
+}
+.cuIcon-title:before {
+	content: "\e82f";
+}
+  .cu-bar {
+	display: flex;
+	position: relative;
+	align-items: center;
+	min-height: 100rpx;
+	justify-content: space-between;
+}
+
+  .cu-bar .action {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	justify-content: center;
+	max-width: 100%;
+}
+
+  .VerticalNav.nav .cu-item {
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    margin: 0;
+    border: none;
+    height: 100rpx;
+    position: relative;
+  }
+  
+  .VerticalNav.nav .cu-item.cur {
+    background-color: #f1f1f1;
+    color: #b40000;
+  }
+  .VerticalNav.nav .cu-item.cur::after {
+    content: "";
+    width: 8rpx;
+    height: 30rpx;
+    border-radius: 10rpx 0 0 10rpx;
+    position: absolute;
+    background-color: #b40000;
+    top: 0;
+    right: 0rpx;
+    bottom: 0;
+    margin: auto;
+  }
+  .VerticalBox{
+    display: flex;
+  }

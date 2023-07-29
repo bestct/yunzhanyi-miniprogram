@@ -1,0 +1,10 @@
+.content{
+  width:100%;
+  box-sizing:border-box;
+  color:#333;
+  flex:1;
+  border-radius:6rpx;
+  padding: 20rpx;
+  border:1rpx solid #949494;
+  font-size: 37rpx;  
+}

@@ -1,0 +1,58 @@
+<view class="container">
+  <view class="user-box">
+    <view class="userinfo" bindtap="toLogin">
+      <image class="userinfo-avatar" src="{{avatarUrl}}" background-size="cover"></image>
+      <view class="userinfo-name">{{nickName}}</view>
+    </view>
+  </view>
+
+  <view class="my">
+    <navigator url="/pages/collection/collection" wx:if="{{isLogin}}" class="my-item flex-wrp" hover-class="my-item-active">
+      <view class="myitem-icon flex-item">
+        <image src="../../static/icon/star.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>我的收藏</text>
+      </view>
+    </navigator>
+    <!--
+        <navigator url="/pages/account/account"  wx:if="{{isLogin}}" class="my-item flex-wrp" hover-class="my-item-active">
+        <view class="myitem-icon flex-item">
+          <image src="../../static/icon/account.png"></image>
+        </view>
+        <view class="myitem-name flex-item">
+          <text>账号管理</text>
+        </view>
+      </navigator>
+       -->
+
+    <view class="my-item flex-wrp" hover-class="my-item-active" bindtap="openZan">
+      <view class="myitem-icon flex-item">
+        <image src="../../static/icon/shang.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>赞赏一下</text>
+      </view>
+    </view>
+    <navigator url="/pages/about/about" class="my-item flex-wrp" hover-class="my-item-active">
+      <view class="myitem-icon flex-item">
+        <image src="../../static/icon/us.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>关于我们</text>
+      </view>
+    </navigator>
+    <button class="my-item flex-wrp" openType="contact" hover-class="my-item-active">
+      <view class="myitem-icon flex-item">
+        <image src="../../static/icon/kefu.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>联系开发者</text>
+      </view>
+    </button>
+  </view>
+  
+  <view class="official" >
+      <official-account></official-account>
+    </view>
+</view>

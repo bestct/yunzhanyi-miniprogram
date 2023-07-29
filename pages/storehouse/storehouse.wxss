@@ -1,0 +1,29 @@
+/* pages/poetry-index/poetry-index.wxss */
+.capsule-bar-bg {
+  width:100%;
+  position:fixed;
+  background-image: linear-gradient(to bottom, #c2c2c2, #cfcfcf, #dcdcdc, #e9e9e9, #f6f6f6);
+  top:0;
+  left:0;
+  z-index: 100;
+}
+.mod-text{
+  margin-top: 10rpx;
+  writing-mode:vertical-rl;
+}
+
+.mod-text text{
+  display:block;
+}
+.tag{
+  width: 23%;
+  justify-content: center;
+  display: flex;
+}
+.tag-name{
+  font-size: 40rpx; margin-top: 10rpx;letter-spacing: 10rpx;
+}
+
+.up-bar{
+  width: 90rpx; height: 6rpx; background-color: #b40000;
+}

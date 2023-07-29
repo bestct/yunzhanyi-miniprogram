@@ -1,0 +1,46 @@
+<view  class="logo">
+<image src="../../static/img/main-logo-black.png" style="width: 12rem;" mode="aspectFit">
+</image>
+</view>
+<view class='buttun-wrapper'>
+        <l-input
+          placeholder="请输入手机号/邮箱"
+          width="750"
+          show-row="{{ false }}"
+          width="600"
+          l-class='input-phone'
+          label-width="120"
+          bind:lininput="onAccountInput"
+          bind:linclear="onAccountInput"
+          clear="{{true}}"
+        >
+          <l-icon class='input-icon' color="#b40000" slot="left" name="phone"/>
+        </l-input>
+      </view>
+      <view class='buttun-wrapper'>
+        <l-input
+          placeholder="请输入密码"
+          width="750"
+          show-row="{{ false }}"
+          width="600"
+          l-class='input-phone'
+          label-width="120"
+          type="password"
+          bind:lininput="onPasswordInput"
+          bind:linclear="onPasswordInput"
+          clear="{{true}}"
+        >
+          <l-icon class='input-icon' slot="left" color="#b40000" name="password"/>
+        </l-input>
+      </view>
+<view class="button-box">
+  <l-button bind:lintap="login" width="500" height="80">账号密码登录</l-button>
+</view>
+<view class="button-box">
+  <l-button bind:lintap="getUserProfile" plain="{{true}}" width="500" height="80">直接登录</l-button>
+</view>
+
+<l-message content="{{content}}"
+             type="{{type}}"
+             duration="{{ duration}}"
+             show="{{show}}"/>

@@ -1,0 +1,88 @@
+
+<view class='detail' wx:if='{{isExist}}'>
+<view class="poetry">
+  <view class='title'>{{poetry.poetryTitle}}</view>
+  <view class="poet">
+    <view class="name">
+      <navigator url="/pages/poetry-index/poetry-index?dynastyId={{poetry.dynastyId}}" >
+        {{poetry.poetryDynasty}}
+      </navigator>
+    </view>·
+    <view class="name" data-poet='{{poetry.poetryAuthor}}'>
+      <navigator url="/pages/author-detail/author-detail?id={{poetry.authorId}}"> {{poetry.poetryAuthor}}</navigator>
+      </view>
+  </view>
+  <view class="poem">
+    <text user-select>{{poetry.poetryContent}}</text>
+  </view>
+<view style="display: flex; flex-direction: row;flex-wrap: wrap; width: 654rpx;">
+<block  wx:for="{{poetry.tagList}}"
+wx:for-item="tag" wx:key="tag">
+<l-tag data-tag="{{tag}}" bindtap="toTag" class="tag-class" width="200" plain="{{true}}" shape="circle" >
+{{tag.tagName}}
+</l-tag>
+</block>
+</view>
+<view class="option-container">
+  <l-button special="{{true}}" bind:lintap="copyBtn">
+  <view class="container">
+      <l-icon size="40" name="checked" color="#000000" />
+      <text class="describe">复制</text>
+    </view>
+    </l-button>
+    <l-button special="{{true}}" bind:lintap="collection">
+  <view class="container">
+      <l-icon size="40" name="favor" color="{{collection ?'#b40000':'#000000'}}" />
+      <text class="describe">收藏</text>
+    </view>
+    </l-button>
+    <l-button special="{{true}}" open-type="share">
+  <view class="container">
+      <l-icon size="40" name="share" color="#000000" />
+      <text class="describe">分享</text>
+    </view>
+    </l-button>
+
+</view>
+</view>
+<view class="author"> 
+<view class="name">
+  <navigator url="/pages/author-detail/author-detail?id={{poetry.author.id}}&name={{poetry.author.authorName}}">
+<text >{{poetry.author.authorName}}
+</text>
+</navigator>
+</view>
+<view class="info">
+	<text class="info-content">{{poetry.author.info}}</text>
+  <navigator url="/pages/author-poetry/author-poetry?id={{poetry.author.id}}&name={{poetry.author.authorName}}">
+    <text style="color: #b40000;">共收录{{poetry.author.recordCount}}首作品></text>
+  </navigator>
+</view>
+<view>
+</view>
+</view>
+<view class="poetry-detail" wx:if="{{hasDetail}}">
+  <l-segment l-active-class="segment-active" l-inactive-class="segment-inactive"
+  l-line-class="line-class"
+  even="{{false}}"
+  l-class-header-line="header-line" scrollable 
+  animated-for-line="{{true}}"
+  bind:linchange="changeCurrent"
+  >
+        <l-segment-item
+        wx:for="{{poetry.poetryDetails}}"
+        wx:for-item='item' tab="{{item.detailType}}" key="{{item.detailId}}" wx:key="key" slot="{{item.detailId}}"
+        >
+        </l-segment-item>
+      </l-segment>
+      <view class="tab-content">
+        <text user-select>
+          {{currentContent}}
+        </text>
+      </view>
+</view>
+</view>
+<l-message content="{{content}}"
+             type="{{type}}"
+             duration="{{ duration}}"
+             show="{{show}}"/>

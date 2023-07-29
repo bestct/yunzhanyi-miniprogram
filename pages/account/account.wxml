@@ -1,0 +1,13 @@
+<view style="margin: 15rpx; padding: 15rpx; background-color: white;">
+  <l-list title="手机号" bind:lintap="bindPhone"  right-desc="{{(account.phone===null||account.phone==='')? '未绑定':account.phone}}"/>
+	<l-list title="邮箱" bind:lintap="bindEmail" right-desc="{{(account.email===null||account.email==='')? '未绑定':account.email}}"/>
+	<l-list title="微信小程序" bind:lintap="bindMini" right-desc="{{account.miniBind ? '已绑定':'未绑定'}} "/>
+	<l-list title="修改密码" bind:lintap="changePassword"/>
+</view>
+<!--确认框 -->
+<l-dialog 
+  show="{{show}}"
+  type="confirm"     
+  title="完善账号"
+	confirm-color="#b40000"
+  content="您尚未用手机号注册账号和设置密码，去完善吗？" />

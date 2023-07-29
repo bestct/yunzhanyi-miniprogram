@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "l-loadmore": "/dist/loadmore/index",
+    "l-capsule-bar":"/dist/capsule-bar/index",
+    "l-search-bar": "/dist/search-bar/index",
+    "l-icon": "/dist/icon/index"
+  }
+}

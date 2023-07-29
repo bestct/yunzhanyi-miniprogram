@@ -1,0 +1,28 @@
+.logo{
+  text-align: center;
+  display:flex;           
+  justify-content: center;       
+}
+.buttun-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.input-phone{
+  margin-top: 20rpx;
+  border-radius: 60rpx;
+  border: 2rpx solid #eee;
+  background: #eaf0f7;
+  color: red
+}
+.input-icon{
+  margin-left: 15rpx;
+}
+.button-box{
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

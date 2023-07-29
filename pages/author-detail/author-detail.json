@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "l-capsule-bar":"/dist/capsule-bar/index",
+    "l-button": "/dist/button/index",
+    "l-icon": "/dist/icon/index",
+    "l-message": "/dist/message/index"
+  }
+}

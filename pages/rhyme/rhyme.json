@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "content-card": "/components/content-card/content-card",
+    "l-button": "/dist/button/index",
+    "l-icon": "/dist/icon/index"
+  },
+  "navigationBarTitleText": "检测"
+}

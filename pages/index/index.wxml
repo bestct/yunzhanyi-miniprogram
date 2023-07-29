@@ -1,0 +1,47 @@
+  <view class="index-container">
+    <view style="margin: 5rpx;">  
+      <content-card name="今日诗词">
+        <view class="poetry" bindtap="toPoetry">
+          <view class='title'>{{indexPoetry.poetryTitle}}</view>
+          <view class="poet">
+            <view class="name">
+              {{indexPoetry.poetryDynasty}}    ·
+            </view>
+            <view class="name" data-poet='{{indexPoetry.poetryAuthor}}'>
+              {{indexPoetry.poetryAuthor}}
+            </view>
+          </view>
+          <view class="poem">
+            <text>{{indexPoetry.poetryContent}}</text>
+          </view>
+        </view>
+      </content-card>
+    </view>
+
+    <view style="margin: 5rpx;">
+     <!-- 名句轮播 -->
+      <swiper class="card-swiper " duration="500"	autoplay="{{true}}" bindchange="cardSwiper">
+        <swiper-item wx:for="{{partList}}" wx:key="{{item}}" class="{{cardCur==index?'cur':''}}">
+          <block>
+            <view class="swiper-item" bindtap="toPoetryDetail" data-id='{{item.poetryId}}'>
+              <view class="part">
+                <view class="content">
+                  <text>{{item.partContent}}
+                  </text>
+                </view>
+              </view>
+              <view class="source">
+              <view class="content">
+              {{item.source}}
+              </view>
+              <image style="width: 38rpx; height: 38rpx; padding: 5rpx;" src="../../static/img/ic_launcher.png">
+              </image>
+        
+              </view>
+            </view>
+          </block>
+        </swiper-item>
+      </swiper>
+
+    </view>
+  </view>

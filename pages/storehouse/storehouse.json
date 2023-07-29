@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "l-capsule-bar":"/dist/capsule-bar/index",
+    "l-search-bar": "/dist/search-bar/index",
+    "content-card": "/components/content-card/content-card",
+    "l-icon":"/dist/icon/index"
+  },
+  "navigationBarTitleText": "文库"
+}

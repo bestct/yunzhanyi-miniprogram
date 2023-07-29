@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "mp-vtabs": "../../components/vtabs/index",
+    "l-capsule-bar":"/dist/capsule-bar/index",
+    "mp-vtabs-content": "../../components/vtabs-content/index"
+  }
+}

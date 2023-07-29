@@ -1,0 +1,120 @@
+.index-container {
+  padding: 20rpx;
+} 
+
+.capsule-bar-bg {
+  width:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index: 100;
+}
+.poetry{
+  width: 88%;
+  padding: 11px;
+}
+.title {
+  font-size: 40rpx;
+  font-weight: 900 !important;
+  text-align: center;
+  margin-bottom: 10rpx;
+}
+.poet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #444;
+}
+.poet>view {
+  padding: 10rpx 10rpx;
+}
+.poet>view.name {
+  font-size: 35rpx;
+  color: #312727;
+}
+.poet view text {
+  color: #666;
+}
+.poem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.poem text {
+  line-height: 1.6;
+  font-size: 35rpx;
+}
+.card-swiper {
+  height: 65vh !important;
+}
+
+.card-swiper swiper-item {
+  width: 560rpx !important;
+  left: 70rpx;
+  box-sizing: border-box;
+  padding: 20rpx 0rpx 20rpx;
+  overflow: initial;
+}
+
+.card-swiper swiper-item .swiper-item {
+  width: 100%;
+  position: relative;
+  height: 100%;
+  border-radius: 10rpx;
+  transform: scale(0.9);
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 2rpx 2rpx 2rpx #cdcfcf;
+  transition: all 0.2s ease-in 0s;
+  overflow: hidden;
+}
+
+
+.card-swiper swiper-item.cur .swiper-item {
+  transform: none;
+  transition: all 0.2s ease-in 0s;
+}
+
+swiper {
+  margin-top: 50rpx !important;
+}
+
+.part {
+  right: 30rpx;
+  top: 50rpx;
+  position: absolute;
+}
+
+.part .content {
+  color: #353535;
+  line-height: 2;
+  font-size: 45rpx;
+  letter-spacing: 10rpx;
+  writing-mode: vertical-rl; /*从左向右 从右向左是 writing-mode: vertical-rl;*/
+}
+.part .content text{
+  display:block;
+}
+.source {
+  margin: 10rpx;
+  left: 30rpx;
+  bottom: 30rpx;
+  position: absolute;
+}
+
+.source .content {
+  color: #353535;
+  font-size: 34rpx;
+  max-height: 400rpx;
+  letter-spacing: 2rpx;
+  writing-mode: vertical-lr; /*从左向右 从右向左是 writing-mode: vertical-rl;*/
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

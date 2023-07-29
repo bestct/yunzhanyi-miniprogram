@@ -1,0 +1,56 @@
+<view class="detail">
+<view class="author"> 
+<view>
+<text class="name">{{author.authorName}}
+</text>
+</view>
+
+<text bindtap="toDynasty"  style="color: #b40000;">
+  {{author.authorDynasty}}
+</text>
+<view class="info">
+	<text>{{author.info}}</text>
+	<navigator url="/pages/author-poetry/author-poetry?id={{author.id}}&name={{author.authorName}}">
+		<text style="color: #b40000;">共收录{{author.recordCount}}首作品></text>
+	</navigator> 
+</view>
+<view class="option-container">
+  <l-button special="{{true}}" bind:lintap="collection">
+  <view class="container">
+      <l-icon size="40" name="favor" color="{{collection ?'#b40000':'#000000'}}" />
+      <text class="describe">收藏</text>
+    </view>
+    </l-button>
+    <l-button special="{{true}}" open-type="share">
+  <view class="container">
+      <l-icon size="40" name="share" color="#000000" />
+      <text class="describe">分享</text>
+    </view>
+    </l-button>
+
+</view>
+
+<view>
+</view>
+</view>
+<view class="poetry">
+<view class="card-head">
+部分作品
+</view>
+<view class="poetry-list">
+<block wx:for="{{author.poetryList}}"
+wx:for-item="poetry" wx:key="poetry">
+
+<navigator url="/pages/poetry-detail/poetry-detail?id={{poetry.poetryId}}" hover-class="navigator-hover">
+	<view class="title">{{poetry.poetryTitle}}
+</view>
+</navigator>
+
+</block>
+</view>
+</view>
+</view>
+<l-message content="{{content}}"
+             type="{{type}}"
+             duration="{{ duration}}"
+             show="{{show}}"/>

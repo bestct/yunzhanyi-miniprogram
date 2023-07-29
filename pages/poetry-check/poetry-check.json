@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "格律检查",
+  "usingComponents": {
+    "l-textarea": "/dist/textarea/index",
+    "l-button": "/dist/button/index",
+    "l-list": "/dist/list/index"
+  }
+}

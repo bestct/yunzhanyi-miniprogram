@@ -1,0 +1,59 @@
+.detail {
+  font-size: 32rpx;
+  padding: 30rpx;
+}
+.author{
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 11px;
+}
+.name{
+	font-size: 46rpx;
+  font-weight: 900 !important;
+  margin-bottom: 10rpx;
+}
+.info{
+	margin-top: 20rpx;
+	font-size: 36rpx;
+}
+
+.option-container {
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.container {
+  padding-left: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.describe {
+  font-size: 28rpx;
+  margin-left:10rpx;
+}
+
+.poetry{
+	margin-top: 20rpx;
+  background-color: rgba(255, 255, 255, 0.8);
+
+}
+.card-head{
+	font-size: 35rpx;
+  font-weight: 900 !important;
+	padding: 10rpx 10rpx 10rpx 15rpx;
+	color: #b40000;
+}
+.poetry-list{
+	column-gap: 5rpx;
+  column-count: 2;
+  padding: 10rpx 10rpx 10rpx 15rpx;
+}
+.title{
+	 	width: 99%;  /*占每列的宽的900%*/
+		break-inside: avoid;
+		padding: 10rpx;
+		color: rgb(71, 16, 16);
+		overflow:hidden; 
+		text-overflow:ellipsis; 
+		white-space:nowrap;
+}

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "l-capsule-bar":"/dist/capsule-bar/index"
+  },
+  "navigationBarTitleText": "我的",
+  "backgroundTextStyle": "dark",
+  "navigationStyle": "custom"
+}

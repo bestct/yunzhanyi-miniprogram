@@ -1,0 +1,33 @@
+<view style="padding: 20rpx;">
+<view style="margin: 5rpx;">
+	<content-card name="诗词工具">
+      <view style="margin: 10rpx;">
+      <l-button bindtap="toPoetryCheck"  type="error" style="margin: 30rpx;" width="270" height="120" icon="success" icon-size="50" icon-color="white">
+      格律检测
+      </l-button>
+      <l-button  bindtap="toFromSearch" style="margin: 30rpx;" type="success" width="270" height="120" icon="research" icon-size="50" icon-color="white">
+      韵部查询
+      </l-button>
+      </view>
+      </content-card>
+<!-- <content-card name="韵书">
+    <view style="display: flex;flex-wrap: wrap;">
+        <view class="book" wx:for="{{rhymeBookList}}" wx:for-item="rhymeBook" wx:key="rhymeBook" data-tag="{{rhymeBook}}">
+        <navigator url="/pages/rhyme-book/rhyme-book?id={{rhymeBook.rhymeBookId}}">
+            <image style="width: 200rpx;height: 300rpx;" src="{{rhymeBook.rhymeBookImage}}"></image>
+        </navigator>
+        </view>
+    </view>
+</content-card> -->
+<content-card name="诗格律">
+<view class="poetry-list">
+<block wx:for="{{formList}}" wx:for-item="form" wx:key="form">
+<navigator url="/pages/poetry-check/poetry-check?firstType={{form.firstType}}&formType={{form.formType}}" hover-class="navigator-hover">
+	<view class="title">{{form.formsName}}
+	</view>
+	</navigator>
+</block>
+</view>
+</content-card>
+</view>
+</view>

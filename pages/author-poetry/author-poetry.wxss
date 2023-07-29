@@ -1,0 +1,65 @@
+/* pages/author-poetry/author-poetry.wxss */
+.capsule-bar-bg {
+  width:100%;
+  position:fixed;
+  background-image: linear-gradient(to bottom, #c2c2c2, #cfcfcf, #dcdcdc, #e9e9e9, #f6f6f6);
+  top:0;
+  left:0;
+  z-index: 100;
+}
+.container {
+  padding: 10rpx;
+}
+.content{
+  width: 94%;
+  border-radius: 10rpx;
+  margin: 5rpx;
+  padding: 20rpx;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1rpx solid rgb(133, 133, 133);
+}
+
+.title-author{
+  display: flex;
+}
+.title{
+  width: 60%;
+  font-size: 40rpx;
+  padding: 10rpx;
+  font-weight: 900 !important;
+  break-inside: avoid;
+	overflow:hidden; 
+	text-overflow:ellipsis; 
+	white-space:nowrap;
+}
+.author{
+  width: 40%;
+  font-size: 35rpx;
+  padding: 15rpx;
+   break-inside: avoid;
+	overflow:hidden; 
+	text-overflow:ellipsis; 
+	white-space:nowrap;
+}
+.poetry-content{
+  padding: 10rpx;
+  font-size: 33rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+ /* 返回顶部 */
+ .goTop{
+  height: 50rpx;
+  width: 50rpx;
+  position: fixed;
+  bottom: 300rpx;
+  padding: 30rpx;
+  background: rgba(122, 128, 131, 0.2);
+  right: 30rpx;
+  border-radius: 50%;
+}

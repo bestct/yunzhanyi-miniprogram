@@ -1,0 +1,11 @@
+{
+  
+  "navigationBarTitleText": "关于我们",
+  "usingComponents": {
+    "l-capsule-bar":"/dist/capsule-bar/index",
+    "l-steps": "/dist/steps/index",
+    "l-step": "/dist/step/index",
+    "content-card": "/components/content-card/content-card"
+  }
+
+}

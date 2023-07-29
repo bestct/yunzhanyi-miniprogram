@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "l-segment": "/dist/segment/index",
+    "l-segment-item": "/dist/segment-item/index",
+    "l-icon": "/dist/icon/index",
+    "l-loadmore": "/dist/loadmore/index",
+    "l-capsule-bar":"/dist/capsule-bar/index",
+    "l-search-bar": "/dist/search-bar/index"
+  }
+}

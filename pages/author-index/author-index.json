@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "全部诗人",
+  "usingComponents": {
+    "l-loadmore": "/dist/loadmore/index",
+    "l-capsule-bar":"/dist/capsule-bar/index",
+    "l-segment": "/dist/segment/index",
+    "l-segment-item": "/dist/segment-item/index"
+  }
+}

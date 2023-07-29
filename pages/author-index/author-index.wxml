@@ -1,0 +1,47 @@
+<view class="tag-bar">
+<view class="head">
+  朝代
+</view>
+<scroll-view style="width: 88%;">
+    <l-segment l-active-class="segment-active"
+  l-inactive-class="segment-inactive"
+  even="{{false}}"
+  has-line="{{false}}"
+  active-key="{{activeKey}}"
+  scrollable 
+  bind:linchange="changeCurrent"
+  >
+    <l-segment-item
+        wx:for="{{dynastyList}}"
+        wx:for-item='item' tab="{{item.dynastyName}}" key="{{item.dynastyId}}" wx:key="key" slot="{{item.dynastyId}}"
+        >
+        </l-segment-item>
+      </l-segment>
+</scroll-view>
+</view>
+<l-loadmore show="{{show}}" type="{{type}}"  line="{{true}}" size="36" l-class="loading">
+  <view slot="content" class="container">
+    <view class="content" wx:for="{{authorList}}" wx:for-item="author" wx:key="author">
+    <view catchtap="toAuthor"
+    data-id="{{author.id}}">
+    <view style="font-size: 36rpx;font-weight: 900 !important;">
+    {{author.authorName}}
+    </view>
+    <view class="info">
+	    <text class="info-content">{{author.info}}</text>
+        <text>共收录{{author.recordCount}}首作品</text>
+
+    </view>
+    <view>
+    </view>
+    </view>
+    </view>
+    <view hidden="{{hasData}}">
+
+  <text style="font-size: 35rpx;">
+  对不起,没有您想要的作者
+  </text>
+</view>
+  </view>
+</l-loadmore>
+<image src='../../static/icon/up.png' class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"></image>

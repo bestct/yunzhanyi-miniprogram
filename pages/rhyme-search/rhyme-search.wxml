@@ -1,0 +1,14 @@
+<!--pages/rhyme-search/rhyme-search.wxml-->
+<view style="padding: 15rpx;margin-top: 30rpx; background-color: white;">
+    <l-search-bar placeholder="搜索您想查询的一个汉字" value="{{initValue}}" show-cancel="{{false}}" bind:linconfirm="searchRhyme" />
+  </view>
+  <view wx:for="{{rhymeData}}" wx:for-item="rhymeBook" wx:key="rhymeBook">
+    <content-card name="{{rhymeBook.rhymeBookName}}">        
+        <view wx:for="{{rhymeBook.rhymeList}}" wx:for-item="rhyme" wx:key="rhyme">
+            <view style="font-size: large; margin: 5px;">
+                {{rhyme.rhymeName}}
+            </view>
+            <rich-text nodes="{{rhyme.rhymeCharacter}}"></rich-text>
+        </view>
+    </content-card>
+  </view>
