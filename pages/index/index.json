@@ -6,5 +6,7 @@
     "l-notice-bar": "/dist/notice-bar/index",
     "l-button": "/dist/button/index",
     "l-icon": "/dist/icon/index"
-  }
+  },
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": true
 }

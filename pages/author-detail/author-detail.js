@@ -1,12 +1,10 @@
 var http = require("../../utils/http");
-import deviceUtil from "../../dist/utils/device-util"
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-        capsuleBarHeight: deviceUtil.getNavigationBarHeight(),
         author:{},
         isExist:false,
         collection:false,

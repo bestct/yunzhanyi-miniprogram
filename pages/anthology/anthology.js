@@ -15,7 +15,9 @@ Page({
     this.setData({
       title : options.name
     })
-    
+    wx.setNavigationBarTitle({
+          title: options.name,
+        })
     http.request({
       url: "/anthology/list/"+options.id,
       method:'GET',

@@ -15,7 +15,7 @@
 
 </content-card>
 <content-card name="发展历程">
-    <l-steps direction="column" active-index="1">
+    <l-steps direction="column" active-index="2">
       <l-step title="2022-10-07">
         <view class="describe-container" slot="describe">
           云沾衣诗词网站上线
@@ -24,6 +24,11 @@
       <l-step title="2022-10-18">
         <view class="describe-container" slot="describe">
           云沾衣诗词网小程序上线
+        </view>
+      </l-step>
+      <l-step title="2023-10-7">
+        <view class="describe-container" slot="describe">
+          云沾衣诗词网1.1.0上线
         </view>
       </l-step>
     </l-steps>

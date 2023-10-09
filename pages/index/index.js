@@ -41,6 +41,7 @@ Page({
         })
         this.towerSwiper("partList")
 
+         wx.stopPullDownRefresh();
       },
       failed:(res)=>{
         console.log(res);
@@ -120,5 +121,11 @@ Page({
       list[0].zIndex = zIndex;
     }
   },
-
+/**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh() {
+    this.index()
+  },
+  
   })

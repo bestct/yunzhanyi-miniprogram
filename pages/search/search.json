@@ -6,5 +6,6 @@
     "l-loadmore": "/dist/loadmore/index",
     "l-capsule-bar":"/dist/capsule-bar/index",
     "l-search-bar": "/dist/search-bar/index"
-  }
+  },
+  "navigationBarTitleText": "诗词&作者查询"
 }

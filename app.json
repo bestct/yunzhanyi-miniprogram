@@ -11,6 +11,7 @@
     "pages/anthology/anthology",
     "pages/mine/mine",
     "pages/login/login",
+    "pages/user/user",
     "pages/poetry-index/poetry-index",
     "pages/author-index/author-index",
     "pages/poetry-detail/poetry-detail",

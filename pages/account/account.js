@@ -76,6 +76,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
+      
       var that=this;
       http.request({
             url:"/account/mini",

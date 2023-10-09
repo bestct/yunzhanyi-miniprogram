@@ -3,7 +3,7 @@ function request(params) {
   var app=getApp()
   var globalData = app.globalData;
     wx.request({
-       url: 'http://192.168.197.201:8081/api'+params.url,
+       url: 'https://www.yunzhanyi.net/api'+params.url,
        method: params.method,
        data: params.data,     
        timeout: 5000,
@@ -73,35 +73,24 @@ function request(params) {
 function cheakLogin(callback) {
     var app=getApp()
     var globalData = app.globalData;
+    
     if (globalData.isLogin) {
       callback(false)
     }else{
-      wx.getUserProfile({
-      desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-      success: (res) => {
-          wx.showLoading({
+        wx.showLoading({
           title: '正在登录中.....',
       })
-        var userInfo = res.userInfo
         wx.login({
           success: res => {
           request({
             url:'/login/mini?principal='+res.code,
             method:'post',
-            data:{
-              avatarUrl:userInfo.avatarUrl,
-              nickName:userInfo.nickName
-            },
             then:(res)=>{
                 //把token存入缓存，请求接口数据时要用
                 wx.setStorageSync('token', res.data.access_token); 
-                wx.setStorageSync('nickName', userInfo.nickName)
-                wx.setStorageSync('avatarUrl', userInfo.avatarUrl)
                 app.globalData={ 
                   isLogin: true,
-                  token:res.data,
-                  avatarUrl:userInfo.avatarUrl,
-                  nickName:userInfo.nickName
+                  token:res.data.access_token,
                   }
                   wx.hideLoading();
                   callback(true);
@@ -110,8 +99,6 @@ function cheakLogin(callback) {
               wx.hideLoading();
             }
           })
-          }
-        })
       }
     })
     }  
