@@ -1,0 +1,41 @@
+<!--获取头像-->
+<view class="container">
+    <view class="user-box">
+        <view class="userinfo" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+                <image class="userinfo-avatar" src="{{avatarUrl}}" background-size="cover" binderror="onError"></image>
+                <view>
+                    <l-button  bind:chooseavatar="onChooseAvatar" open-type="chooseAvatar" size="mini" type="default">选择头像</l-button>
+                </view>
+        </view>
+    </view>
+</view> 
+
+<view class="content">
+    <l-list is-link="{{false}}" icon="user" icon-color="#b40000" title="用户昵称">
+        <view slot="right-section">
+            <input type="nickname" class="weui-input" bindinput="onNikeName" placeholder="请输入昵称" value="{{nickName}}" />
+    </view>
+    </l-list>
+    
+    <l-list icon="help" is-link="{{false}}" icon-color="#b40000" title="个性签名" >
+        <view slot="right-section">
+            <input value="{{signature}}" class="weui-input" bindinput="onSignature" placeholder="请输入个性签名" />
+        </view>
+    </l-list>
+    
+    <l-list icon="favor" is-link="{{false}}" icon-color="#b40000" title="uid" right-desc="{{uid}}">
+    </l-list>
+    <l-list icon="time" is-link="{{false}}" icon-color="#b40000" title="加入时间" right-desc="{{createdTime}}">
+    </l-list>
+    
+<view style="text-align: center; padding: 30rpx;">
+    <l-button bind:lintap="doSave" width="500" height="80">
+      保存
+    </l-button>
+</view>
+</view>
+
+<l-message content="{{content}}"
+             type="{{type}}"
+             duration="{{ duration}}"
+             show="{{show}}"/>

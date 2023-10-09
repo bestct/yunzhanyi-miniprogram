@@ -1,0 +1,30 @@
+/* pages/user/user.wxss */
+.user-box{
+    position: relative;
+    width: 100%;
+    height: 300rpx;
+  }
+  .userinfo {
+    height: 200rpx;
+    margin: auto;  
+    margin-top: 100rpx;
+    text-align: center;
+  }
+  .userinfo .userinfo-avatar {
+    width: 130rpx;
+    height: 130rpx;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  }
+  .userinfo .userinfo-name {
+    font-size: 38rpx;
+    font-weight: bold;
+  }
+  .content{
+    width: 94%;
+    border-radius: 10rpx;
+    margin: 5rpx;
+    padding: 20rpx;
+    background-color: rgba(255, 255, 255, 0.8);
+}

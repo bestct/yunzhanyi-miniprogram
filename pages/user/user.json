@@ -1,0 +1,10 @@
+{
+    
+  "navigationBarTitleText": "用户信息",
+  "usingComponents": {
+    "l-button": "/dist/button/index",
+    "l-list": "/dist/list/index",
+    "l-icon": "/dist/icon/index",
+    "l-message": "/dist/message/index"
+  }
+}
